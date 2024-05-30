@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => package['repository']['url'], :tag => "#{s.version}" }
   s.source_files  = "ios/**/*.{h,m}"
 
-  s.dependency 'React'
-  s.dependency 'CardIO'
-  s.dependency 'ASDKCore'
-  s.dependency 'ASDKUI'
+  # s.dependency 'React'
+  # s.dependency 'CardIO'
+  # s.dependency 'ASDKCore'
+  # s.dependency 'ASDKUI'
   
 end
 

@@ -139,7 +139,10 @@ export class TSCPrinter {
      * Open connection
      */
     public async open(): Promise<Boolean> {
-        await NativeModules.RNTSCPrinter?.openport(this.config)
+        const isSuccess = await NativeModules.RNTSCPrinter?.openport(this.config)
+        if (isSuccess === false) {
+            return false
+        }
         await this.setup()
         return true
     }

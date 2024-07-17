@@ -46,8 +46,8 @@ public class RNTSCPrinterModule extends ReactContextBaseJavaModule {
         }
         String ip = params.getString("ip");
         Integer port = params.getInt("port");
-        Printer.openport(ip,port);
-        promise.resolve(true);
+        String isScuccess = Printer.openport(ip,port);
+        promise.resolve(isScuccess == "1" ? true : false);
     }
 
     @ReactMethod
